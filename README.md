@@ -1,4 +1,6 @@
-中文 | English
+# Foldable Rotation 文档
+
+## 中文 | [English](https://github.com/DreamistW/Foldable-Rotation/blob/main/README_en.md)
 
 本应用适用于折叠屏Android设备，通过监测设备折叠与否自动开启或关闭设备的自动旋转功能：
 - 当设备处于折叠状态时，关闭自动旋转功能
