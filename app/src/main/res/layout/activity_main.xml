@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:showDividers="middle"
+        tools:ignore="UselessParent">
+
+        <!-- 首页顶部文本卡片 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <TextView
+                android:id="@+id/tv_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/welcome_text"
+                android:textSize="16sp"
+                android:lineSpacingExtra="8dp"
+                android:lineSpacingMultiplier="1.2"
+                android:gravity="start"
+                android:autoLink="web"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- 服务开关卡片 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_service_switch_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_switch_label"
+                    android:textSize="16sp"
+                    android:layout_weight="1" />
+
+                <Switch
+                    android:id="@+id/switch_toggle_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 禁用电池优化卡片 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_battery_optimization_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/disable_battery_op_hint_false"
+                    android:textSize="16sp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btn_disable_battery_optimization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/disable_battery_op_label"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 应用版本号卡片 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <TextView
+                android:id="@+id/tv_app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/app_version"
+                android:textSize="16sp"
+                android:lineSpacingExtra="8dp"
+                android:lineSpacingMultiplier="1.2"
+                android:gravity="start"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
