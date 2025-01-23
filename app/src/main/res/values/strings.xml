@@ -14,8 +14,9 @@
     <string name="service_notification_content">服务运行中</string>
     <string name="disable_battery_op_hint_false">未禁用电池优化</string>
     <string name="disable_battery_op_hint_true">已禁用电池优化</string>
-    <string name="welcome_text">本应用会实时监测折叠屏手机的折叠状态, 如果手机处于折叠状态, 就会关闭手机的自动旋转功能; 反之会开启手机的自动旋转功能\n本应用需要【修改系统设置】权限才能正常工作, 并且需要用户自行允许应用开机自启和完全后台运行权限(尤其是国产手机)\n本应用不会联网, 且开源免费使用\n开源项目地址: https://github.com/DreamistW/Foldable-Rotation</string>
-    <string name="app_version">版本号：%1$s</string>
+    <string name="welcome_text">本应用会实时监测折叠屏手机的折叠状态, 如果手机处于折叠状态, 就会关闭手机的自动旋转功能; 反之会开启手机的自动旋转功能\n本应用需要【修改系统设置】权限才能正常工作, 并且需要用户自行允许应用开机自启和完全后台运行权限(尤其是国产手机)\n本应用不会联网, 且开源免费使用</string>
+    <string name="app_version">版本号：%1$s\n开源项目地址: https://github.com/DreamistW/Foldable-Rotation</string>
     <string name="grant_permission_dialog_content">本应用需要【修改系统设置】权限才能正常运行，该权限仅用于开关自动旋转，不会用于其它目的。点击确定按钮后，在跳转的页面中打开【允许修改系统设置】开关即可授权</string>
     <string name="grant_permission_dialog_title">需要授权</string>
+    <string name="auto_rotation_switch_label">自动切换旋转锁定</string>
 </resources>

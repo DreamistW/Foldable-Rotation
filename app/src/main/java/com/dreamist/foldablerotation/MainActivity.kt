@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         val disableBatteryOptimizationButton: Button = findViewById(R.id.btn_disable_battery_optimization)
         val disableBatteryOptimizationText: TextView = findViewById(R.id.tv_battery_optimization_status)
         val versionText: TextView = findViewById(R.id.tv_app_version)
+        val toggleAutoRotationSwitch: Switch = findViewById(R.id.switch_auto_rotation)
         // 配置信息
         val sharedPref = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
         // 获取和显示版本号
@@ -32,18 +33,26 @@ class MainActivity : AppCompatActivity() {
 
         // 初始化开关状态
         val isServiceEnabled = sharedPref.getBoolean("service_enabled", false)
+        val isAutoRotationEnabled = sharedPref.getBoolean("auto_rotation", false)
         toggleServiceSwitch.isChecked = isServiceEnabled
+        toggleAutoRotationSwitch.isChecked = isAutoRotationEnabled
         // 自动启动服务
         handleServiceState(isServiceEnabled, sharedPref)
 
         // 监听服务开关状态变化
         toggleServiceSwitch.setOnCheckedChangeListener { _, isChecked ->
+            toggleAutoRotationSwitch.isEnabled = isChecked
             if (Settings.System.canWrite(this)) {
                 handleServiceState(isChecked, sharedPref)
             } else {
                 toggleServiceSwitch.isChecked = !isChecked
                 showGrantPermissionDialog()
             }
+        }
+
+        // 监听切换旋转锁定开关
+        toggleAutoRotationSwitch.setOnCheckedChangeListener { _, isChecked->
+            handleAutoRotationState(isChecked, sharedPref)
         }
 
         // 监听禁用电池优化按钮点击事件
@@ -129,5 +138,11 @@ class MainActivity : AppCompatActivity() {
             create()
             show()
         }
+    }
+
+    // 切换旋转锁定开关
+    private fun handleAutoRotationState(isChecked: Boolean, sharedPref: android.content.SharedPreferences) {
+        // 更新配置信息
+        sharedPref.edit().putBoolean("auto_rotation", isChecked).apply()
     }
 }

@@ -15,8 +15,9 @@
     <string name="service_notification_content">Service is running</string>
     <string name="disable_battery_op_hint_false">Battery optimization is not disabled</string>
     <string name="disable_battery_op_hint_true">Battery optimization disabled</string>
-    <string name="welcome_text">The app will continuously monitor the folding status of the foldable phone. If the phone is folded, the auto-rotation feature will be turned off, otherwise, the auto-rotation feature will be enabled.\nThis app requires the \"Modify System Settings\" permission to function properly. Additionally, you need to manually grant the app permissions for auto-start and unrestricted background operation, especially on devices from Chinese manufacturers.\nThis app does not require an internet connection, is open-source and free to use.\nOpen source project: https://github.com/DreamistW/Foldable-Rotation</string>
-    <string name="app_version">App version: %1$s</string>
+    <string name="welcome_text">The app will continuously monitor the folding status of the foldable phone. If the phone is folded, the auto-rotation feature will be turned off, otherwise, the auto-rotation feature will be enabled.\nThis app requires the \"Modify System Settings\" permission to function properly. Additionally, you need to manually grant the app permissions for auto-start and unrestricted background operation, especially on devices from Chinese manufacturers.\nThis app does not require an internet connection, is open-source and free to use.</string>
+    <string name="app_version">App version: %1$s\nOpen source project: https://github.com/DreamistW/Foldable-Rotation</string>
     <string name="grant_permission_dialog_content">This app requires the \"Modify System Setting\" permission to function properly. This permission is used only for toggling the auto-rotation feature and will not be used for any other purpose. Click the \"OK\" button to open the settings page and grant authorization.</string>
     <string name="grant_permission_dialog_title">Permission required</string>
+    <string name="auto_rotation_switch_label">Automatically toggle rotation lock</string>
 </resources>
